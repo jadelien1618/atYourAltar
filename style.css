@@ -1,6 +1,10 @@
 ﻿html {
 	overflow-y:hidden !important;
+
 }
+html::-webkit-scrollbar {
+	display: none;
+  }
 body {
 	background-color:black;
 	margin: 0;
@@ -15,8 +19,9 @@ body {
 
 .wrapper {
 	display: inline-flex;
-	padding:50px;
-	padding-top:100px;
+	padding-left:10px;
+	padding-right:50px;
+	padding-top:50px;
 	overflow-y:hidden !important;
 }
 .container {
