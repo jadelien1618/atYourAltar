@@ -46,7 +46,7 @@ body {
 }
 
 .title {
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 16px;
 	font-family: 'Arial', "微軟正黑體", sans-serif;
 	text-transform: none;
@@ -67,7 +67,7 @@ body {
 
  }
 .subtitle {
-	font-size: 11px;
+	font-size: 12px;
 	line-height: 16px;
 	font-family: 'Arial', "微軟正黑體", sans-serif;
 	text-transform: none;
@@ -78,7 +78,7 @@ body {
  }
 
 .text {
-	font-size: 11px;
+	font-size: 12px;
 	line-height: 16px;
 	font-family: 'Arial', "微軟正黑體", sans-serif;
 	text-transform: none;
@@ -89,7 +89,7 @@ body {
 }
 
 .button {
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 16px;
 	font-family: 'Arial', "微軟正黑體", sans-serif;
 	text-transform: none;
