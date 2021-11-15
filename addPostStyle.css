@@ -20,9 +20,11 @@ body {
 .wrapper {
 	padding-top:50px;
 	padding-bottom:50px;
-	height:100%;
+
 	width:75%;
 	margin:auto;
+	top:0;
+	bottom:0;
 }
 
 
@@ -30,8 +32,10 @@ body {
 .tag {
 	margin: auto;
 	border-radius: 24px;
-	/*background: #01CD98;*/
-	padding: 13px;
+
+	padding: 12px;
+	padding-top: 7px;
+	padding-bottom: 7px;
 	outline: 1px solid #01CD98;
 
 	display:inline-block;
@@ -46,6 +50,15 @@ body {
 	color: #e0e0e0;
 	letter-spacing: 00em;
 
+ }
+
+#submit {
+	border-radius: 12px;
+	width:90%;
+	outline: 0px;
+	color: black;
+	background-color: #e0e0e0;
+	font-size: 14px;
  }
 
  :any-link {

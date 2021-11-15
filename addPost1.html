@@ -8,23 +8,55 @@
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<title>數位聖嬰</title>
 		<style type="text/css"></style>
+		<script>
+			var score = 0;
+			var state = true;
+			var keywords = [];
+
+			function changeColor(id,points) {
+				if (state==true){
+					document.getElementById(id).style.backgroundColor = "#01CD98";
+					document.getElementById(id).style.outline = "0px";
+					score = score + points;
+					state=false;
+					return;
+				} 
+				if (state==false){
+					document.getElementById(id).style.backgroundColor = "black";
+					document.getElementById(id).style.outline = "1px solid #01CD98";
+					score = score - points;
+					state=true;
+					return;
+				}
+			}   
+
+		</script>
 	</head>
 
 	<body>
 		<div class="wrapper">
-				<div class="tag" style="margin-right:10px;">先納度 <b>+1</b></div>
-				<div class="tag" style="margin-right:10px;">eden <b>+2</b></div>
-				<div class="tag" style="margin-right:10px;">進入禱告室 <b>+1</b></div>
-				<div class="tag" style="margin-right:10px;">工程師 <b>+2</b></div>
-				<div class="tag" style="margin-right:10px;">eden <b>+2</b></div>
-				<div class="tag" style="margin-right:10px;">eden <b>+2</b></div>
-				<div class="tag" style="margin-right:10px;">eden <b>+2</b></div>
-				<div class="tag" style="margin-right:10px;">eden <b>+2</b></div>
-				<div class="tag" style="margin-right:10px;">eden <b>+2</b></div>
-				<div class="tag" style="margin-right:10px;">eden <b>+2</b></div>
-				<div class="tag" style="margin-right:10px;">eden <b>+2</b></div>
-				<div class="tag" style="margin-right:10px;">eden <b>+2</b></div>
-
+				<a href="#" onclick="changeColor('xanadu',1)"><div class="tag" id="xanadu" style="margin-right:10px;">十二工程師使徒 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor('eden',1)"><div class="tag" id="eden" style="margin-right:10px;">伊甸園 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor('eden',1)"><div class="tag" id="eden" style="margin-right:10px;">伊甸園 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor('eden',1)"><div class="tag" id="eden" style="margin-right:10px;">伊甸園 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor('xanadu',1)"><div class="tag" id="xanadu" style="margin-right:10px;">先納度 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor('eden',1)"><div class="tag" id="eden" style="margin-right:10px;">憤怒地降臨 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor('eden',1)"><div class="tag" id="eden" style="margin-right:10px;">伊甸園 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor('eden',1)"><div class="tag" id="eden" style="margin-right:10px;">伊甸園 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor('xanadu',1)"><div class="tag" id="xanadu" style="margin-right:10px;">先納度 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor('eden',1)"><div class="tag" id="eden" style="margin-right:10px;">伊甸園 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor('eden',1)"><div class="tag" id="eden" style="margin-right:10px;">伊甸園 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor('eden',1)"><div class="tag" id="eden" style="margin-right:10px;">伊甸園 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor('xanadu',1)"><div class="tag" id="xanadu" style="margin-right:10px;">先納度 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor('eden',1)"><div class="tag" id="eden" style="margin-right:10px;">伊甸園 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor('eden',1)"><div class="tag" id="eden" style="margin-right:10px;">2038 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor('eden',1)"><div class="tag" id="eden" style="margin-right:10px;">伊甸園 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor('xanadu',1)"><div class="tag" id="xanadu" style="margin-right:10px;">先納度 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor('eden',1)"><div class="tag" id="eden" style="margin-right:10px;">伊甸園 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor('eden',1)"><div class="tag" id="eden" style="margin-right:10px;">伊甸園 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor('eden',1)"><div class="tag" id="eden" style="margin-right:10px;">伊甸園 <b>+1</b></div></a>
+				<br><br><br>
+				<a href="#"><div class="tag" id="submit">祈 &nbsp&nbsp&nbsp&nbsp&nbsp禱</div></a>
 		</div>
 
 	</body>
