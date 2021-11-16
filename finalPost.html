@@ -26,7 +26,11 @@
 					<div class="subtitle">
 						@St.DigitalBae<br><br>
 
-						Anonymous <br>
+						<script>
+							document.write("信徒" + localStorage.getItem('nameContent'));
+							localStorage.removeItem('nameContent');
+						</script>
+						<br>
 						<script>
 							var days = ['Sun','Mon','Tue','Wed','Thur','Fri','Sat'];
 							var currentTime = new Date();

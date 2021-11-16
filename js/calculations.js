@@ -7,6 +7,9 @@ var e = true;
 var f = true;
 var g = true;
 var h = true;
+var i = true;
+var j = true;
+var k = true;
 var numOfSelection = 0;
 var numOfSubmission = 0;
 var keywords = [];
@@ -83,6 +86,21 @@ function changeColor3(id,points) {
     }
 } 
 
+function changeColor4(id) {
+
+    if (window[id]==true){
+        document.getElementById(id).style.backgroundColor = "#1036FF";
+        window[id]=false;
+        return;
+    } 
+    if (window[id]==false){
+        document.getElementById(id).style.backgroundColor = "black";
+        document.getElementById(id).style.border = "1px solid #1036FF";
+        window[id]=true;
+        return;
+    }
+} 
+
 function disableLink(){
     document.getElementById('submit').disabled=true;
     document.getElementById('submit').removeAttribute('href');    
@@ -105,6 +123,7 @@ function calculatePost() {
         localStorage.setItem('numOfSubmission', numOfSubmission);
         localStorage.setItem('postContent', postContent);
         localStorage.setItem('score', score);
+        localStorage.setItem('nameContent', nameContent);
         alert("您已成功上傳祈禱文 Your prayer was sent");
         window.location.href = 'finalPost.html';
 
@@ -113,9 +132,11 @@ function calculatePost() {
     if (document.getElementById("input").value.length != 0) {
         numOfSubmission = numOfSubmission + 1;
         let postContent = document.getElementById("input").value;
+        let nameContent = document.getElementById("inputName").value;
         localStorage.setItem('numOfSubmission', numOfSubmission);
         localStorage.setItem('postContent', postContent);
         localStorage.setItem('score', score);
+        localStorage.setItem('nameContent', nameContent);
         alert("您已成功上傳祈禱文 Your prayer was sent");
         window.location.href = 'finalPost.html';
 
