@@ -108,24 +108,25 @@ function calculatePost() {
         return;
     }
 
-    if (document.getElementById("inputName").value.length == 0 || k==true) {
+    if ((document.getElementById("inputName").value.length ==0 || document.getElementById("inputName").value == '@') && k==true) {
         alert("請輸入信徒名稱");
         return;
     }
-
+    
     if (document.getElementById("input").value.length != 0) {
         alert("您已成功上傳祈禱文");
         window.location.href = 'finalPost.html';
         numOfSubmission = numOfSubmission + 1;
         let postContent = document.getElementById("input").value;
         if (document.getElementById("inputName").value.length != 0){
-            let nameContent = document.getElementById("inputName").value;
+            localStorage.setItem('nameContent', document.getElementById("inputName").value);
+        } 
+        if (k==false){
+            localStorage.setItem('nameContent', 'Anonymous');
         }
-        let nameContent = "Anonymous";
         localStorage.setItem('numOfSubmission', numOfSubmission);
         localStorage.setItem('postContent', postContent);
         localStorage.setItem('score', score);
-        localStorage.setItem('nameContent', nameContent);
 
     }
 
@@ -134,12 +135,16 @@ function calculatePost() {
         window.location.href = 'finalPost.html';
         let key = keywords[0]*100 + keywords[1]*10 + keywords[2];
         let postContent = god1.get(key);
-        let nameContent = document.getElementById("inputName").value;
         numOfSubmission = numOfSubmission + 1;
         localStorage.setItem('numOfSubmission', numOfSubmission);
         localStorage.setItem('postContent', postContent);
         localStorage.setItem('score', score);
-        localStorage.setItem('nameContent', nameContent);
+        if (document.getElementById("inputName").value.length != 0){
+            localStorage.setItem('nameContent', document.getElementById("inputName").value);
+        } 
+        if (k==false){
+            localStorage.setItem('nameContent', 'Anonymous');
+        }
         
 
     }

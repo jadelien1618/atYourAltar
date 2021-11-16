@@ -27,8 +27,14 @@
 						@St.DigitalBae<br><br>
 
 						<script>
-							document.write("ID: " + localStorage.getItem('nameContent').substring(1));
-							localStorage.removeItem('nameContent');
+							if (localStorage.getItem('nameContent').charAt(0) == '@'){
+								document.write("ID: " + localStorage.getItem('nameContent').substring(1));
+								localStorage.removeItem('nameContent');
+							} else {
+								document.write("ID: " + localStorage.getItem('nameContent'));
+								localStorage.removeItem('nameContent');
+							}
+
 						</script>
 						<br>
 						<script>
