@@ -7,85 +7,10 @@
 		<link rel="stylesheet" href="addPostStyle.css">
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="map.js"></script>
+		<script src="changeColor.js"></script>
 
 		<title>數位聖嬰</title>
 		<style type="text/css"></style>
-
-		<script>
-			var score = 0;
-			var a = true;
-			var b = true;
-			var c = true;
-			var d = true;
-			var e = true;
-			var f = true;
-			var g = true;
-			var numOfSelection = 0;
-			var keywords = [];
-
-			function changeColor1(id,keyword,points) {
-
-				if (window[id]==true){
-					if (numOfSelection==3){
-					alert ("choose up to 3 keywords");
-					return;
-				}
-					document.getElementById(id).style.backgroundColor = "#01CD98";
-					score = score + points;
-					numOfSelection = numOfSelection + 1;
-					window[id]=false;
-					keywords.push(keyword);
-					return;
-				} 
-				if (window[id]==false){
-					document.getElementById(id).style.backgroundColor = "black";
-					document.getElementById(id).style.border = "1px solid #01CD98";
-					score = score - points;
-					numOfSelection = numOfSelection - 1;
-					window[id]=true;
-					var index = keywords.indexOf(keyword);
-					if (index !== -1) {
-						keywords.splice(index, 1);
-					}
-					return;
-				}
-			}  
-			function changeColor2(id,keyword,points) {
-
-				if (window[id]==true){
-					if (numOfSelection==3){
-					alert ("choose up to 3 keywords");
-					return;
-				}
-					document.getElementById(id).style.backgroundColor = "#FE5858";
-					score = score + points;
-					numOfSelection = numOfSelection + 1;
-					window[id]=false;
-					keywords.push(keyword);
-					return;
-				} 
-				if (window[id]==false){
-					document.getElementById(id).style.backgroundColor = "black";
-					document.getElementById(id).style.border = "1px solid #FE5858";
-					score = score - points;
-					numOfSelection = numOfSelection - 1;
-					window[id]=true;
-					var index = keywords.indexOf(keyword);
-					if (index !== -1) {
-						keywords.splice(index, 1);
-					}
-					return;
-				}
-			} 
-			
-			function calculatePost() {
-				let key = keywords[0]*100 + keywords[1]*10 + keywords[2];
-				let postContent = god1.get(key);
-				alert(postContent);
-			}
-
-		</script>
-		
 
 	</head>
 
@@ -94,7 +19,7 @@
 			<div class="int-box">
 				<div class="direction">
 					請選擇三個迷因關鍵字<br>
-					Please choose three keywords
+					Please choose three meme-keywords
 				</div><br><br>
 				<a href="#" onclick="changeColor1('a',1,1)"><div class="tag1" id="a" style="margin-right:10px;">十二工程師使徒 <b>+1</b></div></a>
 				<a href="#" onclick="changeColor2('b',2,1)"><div class="tag2" id="b" style="margin-right:10px;">現實的伊甸園 <b>+1</b></div></a>
@@ -103,6 +28,12 @@
 				<a href="#" onclick="changeColor2('e',5,1)"><div class="tag2" id="e" style="margin-right:10px;">應許之地在先納度 <b>+1</b></div></a>
 				<a href="#" onclick="changeColor1('f',6,1)"><div class="tag1" id="f" style="margin-right:10px;">憤怒地降臨 <b>+1</b></div></a>
 				<a href="#" onclick="changeColor1('g',7,1)"><div class="tag1" id="g" style="margin-right:10px;">倒數計時至2038 <b>+2</b></div></a>
+				<br><br><br>
+				<div class="direction">
+					是否召喚迷因咒語<br>
+					Conjure meme magic<br><br>
+					<a href="#" onclick="changeColor3('h',3)"><div class="tag3" id="h" style="margin-right:10px;">數位聖嬰 <b>x3</b></div></a>
+				</div>
 				<br><br><br>
 				<a href="#" onclick="calculatePost()"><div class="tag1" id="submit">祈 &nbsp&nbsp&nbsp&nbsp&nbsp禱</div></a>
 			</div>

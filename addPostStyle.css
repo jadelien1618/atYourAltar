@@ -86,6 +86,31 @@ div.int-box {
 
  }
 
+
+ .tag3 {
+	margin: auto;
+	border-radius: 16px;
+
+	padding: 12px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	border: 1px solid #FFB400;
+
+	display:inline-block;
+	position:relative;
+	margin-bottom: 10px;
+
+	font-size: 12px;
+	line-height: 12px;
+	font-family: 'Arial', "微軟正黑體", sans-serif;
+	text-transform: none;
+	text-decoration: none;
+	color: #e0e0e0;
+	letter-spacing: 00em;
+
+ }
+
+
 #submit {
 	border-radius: 16px;
 	border: 1px solid #e0e0e0;
