@@ -92,8 +92,8 @@ div.int-box {
 	border-radius: 16px;
 
 	padding: 12px;
-	padding-top: 9px;
-	padding-bottom: 9px;
+	padding-top: 7px;
+	padding-bottom: 7px;
 	border: 1px solid #FFB400;
 
 	display:inline-block;
@@ -110,9 +110,19 @@ div.int-box {
 
  }
 
+ .input {
+	border-radius: 24px;
+	width: 75%;
+	border:0px;
+	padding: 12px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border: 1px solid #e0e0e0;
+	background-color: #e0e0e0;
+ }
 
 #submit {
-	border-radius: 16px;
+	border-radius: 24px;
 	border: 1px solid #e0e0e0;
 	width:75%;
 	outline: 0px;
