@@ -31,12 +31,12 @@ body {
 
 .tag {
 	margin: auto;
-	border-radius: 12px;
-	
+	border-radius: 16px;
+
 	padding: 12px;
-	padding-top: 7px;
-	padding-bottom: 7px;
-	outline: 1px solid #01CD98;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	border: 1px solid #01CD98;
 
 	display:inline-block;
 	position:relative;
@@ -53,7 +53,8 @@ body {
  }
 
 #submit {
-	border-radius: 12px;
+	border-radius: 16px;
+	border: 1px solid #e0e0e0;
 	width:90%;
 	outline: 0px;
 	color: black;
