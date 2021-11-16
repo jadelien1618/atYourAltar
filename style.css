@@ -1,5 +1,5 @@
 ﻿html {
-	overflow-y:hidden !important;
+	
 
 }
 html::-webkit-scrollbar {
@@ -13,16 +13,24 @@ body {
 	width: 100%;
 	height: 100%;
 	
-	overflow-y:hidden !important;
+	/*overflow-y:hidden !important;*/
 }
 
 
-.wrapper {
-	display: inline-flex;
+.ext-box {
 	padding-left:10px;
-	padding-right:50px;
-	padding-top:50px;
-	overflow-y:hidden !important;
+	float:left;
+	
+	height:100vh;
+	width:1180px;
+
+	display:table;
+
+}
+
+.int-box {
+	display:table-cell;
+	vertical-align: middle;
 }
 .container {
 	position:relative;
@@ -30,9 +38,7 @@ body {
 	border-radius: 12px;
 	background: #ececec;
 	padding: 35px; 
-	overflow-y:hidden !important;
-
-	/*box-shadow: 0 0 20px #c7c7c7;*/
+	float: left;
 	margin-right:20px;
 }
 

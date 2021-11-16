@@ -17,17 +17,27 @@ body {
 }
 
 
-.wrapper {
-	padding-top:50px;
-	padding-bottom:50px;
+div.ext-box {
 
 	width:75%;
 	margin:auto;
-	top:0;
-	bottom:0;
+	height:100vh;
+	display:table;
 }
-
-
+div.int-box {
+	display:table-cell;
+	vertical-align: middle;
+}
+.direction {
+	font-size: 16px;
+	line-height: 16px;
+	font-family: 'Arial', "微軟正黑體", sans-serif;
+	text-transform: none;
+	text-decoration: none;
+	color: #e0e0e0;
+	letter-spacing: 00em;
+	text-align: center;
+}
 
 .tag {
 	margin: auto;
