@@ -10,6 +10,7 @@ var h = true;
 var i = true;
 var j = true;
 var k = true;
+
 var numOfSelection = 0;
 var numOfSubmission = 0;
 var keywords = [];
@@ -26,6 +27,7 @@ function changeColor1(id,keyword,points) {
         numOfSelection = numOfSelection + 1;
         window[id]=false;
         keywords.push(keyword);
+        input.value='';
         return;
     } 
     if (window[id]==false){
@@ -53,6 +55,7 @@ function changeColor2(id,keyword,points) {
         numOfSelection = numOfSelection + 1;
         window[id]=false;
         keywords.push(keyword);
+        input.value='';
         return;
     } 
     if (window[id]==false){
@@ -75,6 +78,7 @@ function changeColor3(id,points) {
         document.getElementById(id).style.backgroundColor = "#FFB400";
         score = score * points;
         window[id]=false;
+        input.value='';
         return;
     } 
     if (window[id]==false){
@@ -108,6 +112,28 @@ function resetAnonymousButton(id){
     window[id]=true;
 }
 
+function resetKeywordButton(){
+
+    var keywordStatesStr = ['a','b','c','d','e','f','g','h','i','j'];
+    for (let i=0;i<10;i++){
+        if (document.getElementById(keywordStatesStr[i]).style.backgroundColor=="#FE5858"){
+            document.getElementById(keywordStatesStr[i]).style.border = "1px solid #FE5858";
+        }
+        if (document.getElementById(keywordStatesStr[i]).style.backgroundColor=="#01CD98"){
+            document.getElementById(keywordStatesStr[i]).style.border = "1px solid #01CD98";
+        }
+        if (document.getElementById(keywordStatesStr[i]).style.backgroundColor=="#FFB400"){
+            document.getElementById(keywordStatesStr[i]).style.border = "1px solid #FFB400";
+        }
+        document.getElementById(keywordStatesStr[i]).style.backgroundColor = "black";
+        window[keywordStatesStr[i]]=true;
+        score = 0;
+        numOfSelection = 0;
+        keywords = [];
+
+    }
+}
+
 function calculatePost() {
     if (numOfSelection < 3 && document.getElementById("input").value.length == 0) {
         alert("請選擇三個迷因關鍵字或輸入祈禱文");
@@ -133,7 +159,7 @@ function calculatePost() {
         localStorage.setItem('numOfSubmission', numOfSubmission);
         localStorage.setItem('postContent', postContent);
         localStorage.setItem('score', score);
-
+        return;
     }
 
     if (numOfSelection == 3){

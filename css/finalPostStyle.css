@@ -40,18 +40,11 @@ div.container {
 
 	position:relative;
 	border-radius: 12px;
-	background: #ececec;
+	background-color: #ececec;
 
 }
 
 
-#button {
-	margin: auto;
-	border-radius: 12px;
-	background: #01CD98;
-	padding: 13px;
-
-}
 
 .title {
 	font-size: 16px;
@@ -64,16 +57,6 @@ div.container {
 
  }
 
-.megaTitle {
-	font-size: 24px;
-	line-height: 30px;
-	font-family: 'Arial', "微軟正黑體", sans-serif;
-	text-transform: none;
-	text-decoration: none;
-	color: #ececec;
-	letter-spacing: 00em;
-
- }
 .subtitle {
 	font-size: 12px;
 	line-height: 16px;
