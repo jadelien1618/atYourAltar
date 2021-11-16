@@ -18,7 +18,7 @@ function changeColor1(id,keyword,points) {
 
     if (window[id]==true){
         if (numOfSelection==3){
-        alert ("至多選擇三個迷因關鍵字 Choose up to three meme-keywords");
+        alert ("至多選擇三個迷因關鍵字");
         return;
     }
         document.getElementById(id).style.backgroundColor = "#01CD98";
@@ -45,7 +45,7 @@ function changeColor2(id,keyword,points) {
 
     if (window[id]==true){
         if (numOfSelection==3){
-        alert ("至多選擇三個迷因關鍵字 Choose up to three meme-keywords");
+        alert ("至多選擇三個迷因關鍵字");
         return;
     }
         document.getElementById(id).style.backgroundColor = "#FE5858";
@@ -104,16 +104,33 @@ function changeColor4(id) {
 
 function calculatePost() {
     if (numOfSelection < 3 && document.getElementById("input").value.length == 0) {
-        alert("請選擇三個迷因關鍵字或輸入祈禱文 Please choose three meme-keywords or enter your own prayer");
+        alert("請選擇三個迷因關鍵字或輸入祈禱文");
         return;
     }
 
     if (document.getElementById("inputName").value.length == 0 || k==true) {
+        alert("請輸入信徒名稱");
+        return;
+    }
+
+    if (document.getElementById("input").value.length != 0) {
+        alert("您已成功上傳祈禱文");
+        window.location.href = 'finalPost.html';
+        numOfSubmission = numOfSubmission + 1;
+        let postContent = document.getElementById("input").value;
+        if (document.getElementById("inputName").value.length != 0){
+            let nameContent = document.getElementById("inputName").value;
+        }
+        let nameContent = "Anonymous";
+        localStorage.setItem('numOfSubmission', numOfSubmission);
+        localStorage.setItem('postContent', postContent);
+        localStorage.setItem('score', score);
+        localStorage.setItem('nameContent', nameContent);
 
     }
-    
+
     if (numOfSelection == 3){
-        alert("您已成功上傳祈禱文 Your prayer was sent");
+        alert("您已成功上傳祈禱文");
         window.location.href = 'finalPost.html';
         let key = keywords[0]*100 + keywords[1]*10 + keywords[2];
         let postContent = god1.get(key);
@@ -124,19 +141,6 @@ function calculatePost() {
         localStorage.setItem('score', score);
         localStorage.setItem('nameContent', nameContent);
         
-
-    }
-
-    if (document.getElementById("input").value.length != 0) {
-        alert("您已成功上傳祈禱文 Your prayer was sent");
-        window.location.href = 'finalPost.html';
-        numOfSubmission = numOfSubmission + 1;
-        let postContent = document.getElementById("input").value;
-        let nameContent = document.getElementById("inputName").value;
-        localStorage.setItem('numOfSubmission', numOfSubmission);
-        localStorage.setItem('postContent', postContent);
-        localStorage.setItem('score', score);
-        localStorage.setItem('nameContent', nameContent);
 
     }
 }
