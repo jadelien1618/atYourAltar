@@ -83,12 +83,32 @@ function changeColor3(id,points) {
     }
 } 
 
-function calculatePost() {
-    let key = keywords[0]*100 + keywords[1]*10 + keywords[2];
-    let postContent = god1.get(key);
-    numOfSubmission = numOfSubmission + 1;
-    sessionStorage.setItem('numOfSubmission', numOfSubmission);
-    sessionStorage.setItem('postContent', postContent);
-    sessionStorage.setItem('score', score);
-    alert("您已成功上傳祈禱文 Your prayer was sent");
+function disableLink(){
+    document.getElementById('submit').disabled=true;
+    document.getElementById('submit').removeAttribute('href');    
 }
+
+function showLink(){
+    document.getElementById('submit').disabled=false;
+    document.getElementById('submit').href = "finalPost.html";
+}
+
+function calculatePost() {
+    if (numOfSelection < 3) {
+        alert("請選擇三個迷因關鍵字 Please choose three meme-keywords");
+        return;
+    }
+    if (numOfSelection = 3){
+        let key = keywords[0]*100 + keywords[1]*10 + keywords[2];
+        let postContent = god1.get(key);
+        numOfSubmission = numOfSubmission + 1;
+        localStorage.setItem('numOfSubmission', numOfSubmission);
+        localStorage.setItem('postContent', postContent);
+        localStorage.setItem('score', score);
+        alert("您已成功上傳祈禱文 Your prayer was sent");
+        window.location.href = 'finalPost.html';
+
+    }
+}
+
+
