@@ -91,6 +91,7 @@ function changeColor4(id) {
     if (window[id]==true){
         document.getElementById(id).style.backgroundColor = "#1036FF";
         window[id]=false;
+        inputName.value='@';
         return;
     } 
     if (window[id]==false){
@@ -101,6 +102,11 @@ function changeColor4(id) {
     }
 } 
 
+function resetAnonymousButton(id){
+    document.getElementById(id).style.backgroundColor = "black";
+    document.getElementById(id).style.border = "1px solid #1036FF";
+    window[id]=true;
+}
 
 function calculatePost() {
     if (numOfSelection < 3 && document.getElementById("input").value.length == 0) {
