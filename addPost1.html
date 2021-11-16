@@ -17,13 +17,19 @@
 			var e = true;
 			var f = true;
 			var g = true;
+			var numOfSelection = 0;
 			var keywords = [];
 
 			function changeColor(id,keyword,points) {
 
 				if (window[id]==true){
+					if (numOfSelection==3){
+					alert ("choose up to 3 keywords");
+					return;
+				}
 					document.getElementById(id).style.backgroundColor = "#01CD98";
 					score = score + points;
+					numOfSelection = numOfSelection + 1;
 					window[id]=false;
 					keywords.push(keyword);
 					return;
@@ -32,6 +38,7 @@
 					document.getElementById(id).style.backgroundColor = "black";
 					document.getElementById(id).style.border = "1px solid #01CD98";
 					score = score - points;
+					numOfSelection = numOfSelection - 1;
 					window[id]=true;
 					var index = keywords.indexOf(keyword);
 					if (index !== -1) {
