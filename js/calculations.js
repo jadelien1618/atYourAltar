@@ -107,12 +107,17 @@ function calculatePost() {
         alert("請選擇三個迷因關鍵字或輸入祈禱文 Please choose three meme-keywords or enter your own prayer");
         return;
     }
+
+    if (document.getElementById("inputName").value.length == 0 || k==true) {
+
+    }
     
     if (numOfSelection == 3){
         alert("您已成功上傳祈禱文 Your prayer was sent");
         window.location.href = 'finalPost.html';
         let key = keywords[0]*100 + keywords[1]*10 + keywords[2];
         let postContent = god1.get(key);
+        let nameContent = document.getElementById("inputName").value;
         numOfSubmission = numOfSubmission + 1;
         localStorage.setItem('numOfSubmission', numOfSubmission);
         localStorage.setItem('postContent', postContent);
