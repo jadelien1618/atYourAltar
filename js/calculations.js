@@ -94,14 +94,25 @@ function showLink(){
 }
 
 function calculatePost() {
-    if (numOfSelection < 3) {
-        alert("請選擇三個迷因關鍵字 Please choose three meme-keywords");
+    if (numOfSelection < 3 && document.getElementById("input").value.length == 0) {
+        alert("請選擇三個迷因關鍵字或輸入祈禱文 Please choose three meme-keywords or enter your own prayer");
         return;
     }
     if (numOfSelection = 3){
         let key = keywords[0]*100 + keywords[1]*10 + keywords[2];
         let postContent = god1.get(key);
         numOfSubmission = numOfSubmission + 1;
+        localStorage.setItem('numOfSubmission', numOfSubmission);
+        localStorage.setItem('postContent', postContent);
+        localStorage.setItem('score', score);
+        alert("您已成功上傳祈禱文 Your prayer was sent");
+        window.location.href = 'finalPost.html';
+
+    }
+
+    if (document.getElementById("input").value.length != 0) {
+        numOfSubmission = numOfSubmission + 1;
+        let postContent = document.getElementById("input").value;
         localStorage.setItem('numOfSubmission', numOfSubmission);
         localStorage.setItem('postContent', postContent);
         localStorage.setItem('score', score);
