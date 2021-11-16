@@ -101,22 +101,16 @@ function changeColor4(id) {
     }
 } 
 
-function disableLink(){
-    document.getElementById('submit').disabled=true;
-    document.getElementById('submit').removeAttribute('href');    
-}
-
-function showLink(){
-    document.getElementById('submit').disabled=false;
-    document.getElementById('submit').href = "finalPost.html";
-}
 
 function calculatePost() {
     if (numOfSelection < 3 && document.getElementById("input").value.length == 0) {
         alert("請選擇三個迷因關鍵字或輸入祈禱文 Please choose three meme-keywords or enter your own prayer");
         return;
     }
-    if (numOfSelection = 3){
+    
+    if (numOfSelection == 3){
+        alert("您已成功上傳祈禱文 Your prayer was sent");
+        window.location.href = 'finalPost.html';
         let key = keywords[0]*100 + keywords[1]*10 + keywords[2];
         let postContent = god1.get(key);
         numOfSubmission = numOfSubmission + 1;
@@ -124,12 +118,13 @@ function calculatePost() {
         localStorage.setItem('postContent', postContent);
         localStorage.setItem('score', score);
         localStorage.setItem('nameContent', nameContent);
-        alert("您已成功上傳祈禱文 Your prayer was sent");
-        window.location.href = 'finalPost.html';
+        
 
     }
 
     if (document.getElementById("input").value.length != 0) {
+        alert("您已成功上傳祈禱文 Your prayer was sent");
+        window.location.href = 'finalPost.html';
         numOfSubmission = numOfSubmission + 1;
         let postContent = document.getElementById("input").value;
         let nameContent = document.getElementById("inputName").value;
@@ -137,8 +132,6 @@ function calculatePost() {
         localStorage.setItem('postContent', postContent);
         localStorage.setItem('score', score);
         localStorage.setItem('nameContent', nameContent);
-        alert("您已成功上傳祈禱文 Your prayer was sent");
-        window.location.href = 'finalPost.html';
 
     }
 }
