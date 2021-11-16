@@ -8,6 +8,7 @@ var f = true;
 var g = true;
 var h = true;
 var numOfSelection = 0;
+var numOfSubmission = 0;
 var keywords = [];
 
 function changeColor1(id,keyword,points) {
@@ -85,5 +86,9 @@ function changeColor3(id,points) {
 function calculatePost() {
     let key = keywords[0]*100 + keywords[1]*10 + keywords[2];
     let postContent = god1.get(key);
+    numOfSubmission = numOfSubmission + 1;
+    sessionStorage.setItem('numOfSubmission', numOfSubmission);
+    sessionStorage.setItem('postContent', postContent);
+    sessionStorage.setItem('score', score);
     alert("您已成功上傳祈禱文 Your prayer was sent");
 }
