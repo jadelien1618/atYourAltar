@@ -20,7 +20,7 @@
 			var numOfSelection = 0;
 			var keywords = [];
 
-			function changeColor(id,keyword,points) {
+			function changeColor1(id,keyword,points) {
 
 				if (window[id]==true){
 					if (numOfSelection==3){
@@ -46,6 +46,33 @@
 					}
 					return;
 				}
+			}  
+			function changeColor2(id,keyword,points) {
+
+				if (window[id]==true){
+					if (numOfSelection==3){
+					alert ("choose up to 3 keywords");
+					return;
+				}
+					document.getElementById(id).style.backgroundColor = "#FE5858";
+					score = score + points;
+					numOfSelection = numOfSelection + 1;
+					window[id]=false;
+					keywords.push(keyword);
+					return;
+				} 
+				if (window[id]==false){
+					document.getElementById(id).style.backgroundColor = "black";
+					document.getElementById(id).style.border = "1px solid #FE5858";
+					score = score - points;
+					numOfSelection = numOfSelection - 1;
+					window[id]=true;
+					var index = keywords.indexOf(keyword);
+					if (index !== -1) {
+						keywords.splice(index, 1);
+					}
+					return;
+				}
 			}   
 
 		</script>
@@ -58,15 +85,15 @@
 					請選擇三個迷因關鍵字<br>
 					Please choose three keywords
 				</div><br><br>
-				<a href="#" onclick="changeColor('a','十二工程師使徒',1)"><div class="tag" id="a" style="margin-right:10px;">十二工程師使徒 <b>+1</b></div></a>
-				<a href="#" onclick="changeColor('b','現實的伊甸園',1)"><div class="tag" id="b" style="margin-right:10px;">現實的伊甸園 <b>+1</b></div></a>
-				<a href="#" onclick="changeColor('c','網民們有禍了',1)"><div class="tag" id="c" style="margin-right:10px;">網民們有禍了 <b>+1</b></div></a>
-				<a href="#" onclick="changeColor('d','數位聖嬰的降臨',1)"><div class="tag" id="d" style="margin-right:10px;">數位聖嬰的降臨 <b>+1</b></div></a>
-				<a href="#" onclick="changeColor('e','應許之地在先納度',1)"><div class="tag" id="e" style="margin-right:10px;">應許之地在先納度 <b>+1</b></div></a>
-				<a href="#" onclick="changeColor('f','憤怒地降臨',1)"><div class="tag" id="f" style="margin-right:10px;">憤怒地降臨 <b>+1</b></div></a>
-				<a href="#" onclick="changeColor('g','倒數計時至2038',1)"><div class="tag" id="g" style="margin-right:10px;">倒數計時至2038 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor1('a','十二工程師使徒',1)"><div class="tag1" id="a" style="margin-right:10px;">十二工程師使徒 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor2('b','現實的伊甸園',1)"><div class="tag2" id="b" style="margin-right:10px;">現實的伊甸園 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor2('c','網民們有禍了',1)"><div class="tag2" id="c" style="margin-right:10px;">網民們有禍了 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor1('d','數位聖嬰的降臨',1)"><div class="tag1" id="d" style="margin-right:10px;">數位聖嬰的降臨 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor2('e','應許之地在先納度',1)"><div class="tag2" id="e" style="margin-right:10px;">應許之地在先納度 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor1('f','憤怒地降臨',1)"><div class="tag1" id="f" style="margin-right:10px;">憤怒地降臨 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor1('g','倒數計時至2038',1)"><div class="tag1" id="g" style="margin-right:10px;">倒數計時至2038 <b>+1</b></div></a>
 				<br><br><br>
-				<a href="#"><div class="tag" id="submit">祈 &nbsp&nbsp&nbsp&nbsp&nbsp禱</div></a>
+				<a href="#"><div class="tag1" id="submit">祈 &nbsp&nbsp&nbsp&nbsp&nbsp禱</div></a>
 			</div>
 		</div>
 

@@ -1,5 +1,5 @@
 ﻿html {
-	overflow-y:hidden !important;
+	overflow:hidden !important;
 	width: 100%;
 	height: 100%;
 
@@ -15,7 +15,7 @@ body {
 	width: 100%;
 	height: 100%;
 	
-	overflow-y:hidden !important;
+	overflow:hidden !important;
 }
 
 
@@ -40,7 +40,7 @@ div.int-box {
 	text-align: center;
 }
 
-.tag {
+.tag1 {
 	margin: auto;
 	border-radius: 16px;
 
@@ -63,14 +63,39 @@ div.int-box {
 
  }
 
+ .tag2 {
+	margin: auto;
+	border-radius: 16px;
+
+	padding: 12px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	border: 1px solid #FE5858;
+
+	display:inline-block;
+	position:relative;
+	margin-bottom: 10px;
+
+	font-size: 12px;
+	line-height: 12px;
+	font-family: 'Arial', "微軟正黑體", sans-serif;
+	text-transform: none;
+	text-decoration: none;
+	color: #e0e0e0;
+	letter-spacing: 00em;
+
+ }
+
 #submit {
 	border-radius: 16px;
 	border: 1px solid #e0e0e0;
-	width:90%;
+	width:75%;
 	outline: 0px;
 	color: black;
 	background-color: #e0e0e0;
 	font-size: 14px;
+	padding-top: 7px;
+	padding-bottom: 7px;
  }
 
  :any-link {
