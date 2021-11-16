@@ -14,7 +14,7 @@ function changeColor1(id,keyword,points) {
 
     if (window[id]==true){
         if (numOfSelection==3){
-        alert ("至多選擇三個迷因關鍵字 choose up to three meme-keywords");
+        alert ("至多選擇三個迷因關鍵字 Choose up to three meme-keywords");
         return;
     }
         document.getElementById(id).style.backgroundColor = "#01CD98";
@@ -41,7 +41,7 @@ function changeColor2(id,keyword,points) {
 
     if (window[id]==true){
         if (numOfSelection==3){
-        alert ("至多選擇三個迷因關鍵字 choose up to three meme-keywords");
+        alert ("至多選擇三個迷因關鍵字 Choose up to three meme-keywords");
         return;
     }
         document.getElementById(id).style.backgroundColor = "#FE5858";
@@ -85,5 +85,5 @@ function changeColor3(id,points) {
 function calculatePost() {
     let key = keywords[0]*100 + keywords[1]*10 + keywords[2];
     let postContent = god1.get(key);
-    alert(postContent);
+    alert("您已成功上傳祈禱文 Your prayer was sent");
 }
