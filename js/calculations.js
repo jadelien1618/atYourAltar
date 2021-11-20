@@ -10,6 +10,8 @@ var h = true;
 var i = true;
 var j = true;
 var k = true;
+var l = true;
+var m = true;
 
 var numOfSelection = 0;
 var numOfSubmission = 0;
