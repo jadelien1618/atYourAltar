@@ -16,8 +16,10 @@ var m = true;
 var numOfSelection = 0;
 var numOfSubmission = 0;
 var keywords = [];
+var numbers = [];
+var tags = ["#奉聖嬰之名","數位末世","網民無助","天國仙納度","2038年網路失控","#救世病毒","#靈擾現象","#魔鬼酸民","#十二工程師使徒"];
 
-function changeColor1(id,keyword,points) {
+function changeColor1(id,keyword,number,points) {
 
     if (window[id]==true){
         if (numOfSelection==3){
@@ -42,10 +44,14 @@ function changeColor1(id,keyword,points) {
         if (index !== -1) {
             keywords.splice(index, 1);
         }
+        var index2 = numbers.indexOf(number);
+        if (index2 !== -1) {
+            numbers.splice(index2, 1);
+        }
         return;
     }
 }  
-function changeColor2(id,keyword,points) {
+function changeColor2(id,keyword,number,points) {
 
     if (window[id]==true){
         if (numOfSelection==3){
@@ -57,6 +63,7 @@ function changeColor2(id,keyword,points) {
         numOfSelection = numOfSelection + 1;
         window[id]=false;
         keywords.push(keyword);
+        numbers.push(number);
         input.value='';
         return;
     } 
@@ -69,6 +76,10 @@ function changeColor2(id,keyword,points) {
         var index = keywords.indexOf(keyword);
         if (index !== -1) {
             keywords.splice(index, 1);
+        }
+        var index2 = numbers.indexOf(number);
+        if (index2 !== -1) {
+            numbers.splice(index2, 1);
         }
         return;
     }
@@ -167,8 +178,13 @@ function calculatePost() {
     if (numOfSelection == 3){
         alert("您已成功上傳祈禱文" + keywords);
         window.location.href = 'finalPost.html';
-        let key = keywords[0]*100 + keywords[1]*10 + keywords[2];
-        let postContent = god1.get(key);
+        let firstArray = keywords[0];
+        let secondArray = keywords[1];
+        let thirdArray = keywords[2];
+        let firstNumber = numbers[0];
+        let secondNumber = numbers[1];
+        let thirdNumber = numbers[2];
+        let postContent = "&nbsp&nbsp&nbsp&nbsp&nbsp" + firstArray[Math.floor(Math.random()*firstArray.length)] + "<br>" +  "&nbsp&nbsp&nbsp&nbsp&nbsp" + secondArray[Math.floor(Math.random()*secondArray.length)] + "<br>" +  "&nbsp&nbsp&nbsp&nbsp&nbsp" +thirdArray[Math.floor(Math.random()*thirdArray.length)] + "<br><br>" + tags[firstNumber] + tags[secondNumber] + tags[thirdNumber];
         numOfSubmission = numOfSubmission + 1;
         localStorage.setItem('numOfSubmission', numOfSubmission);
         localStorage.setItem('postContent', postContent);
