@@ -163,7 +163,7 @@ function calculatePost() {
     }
 
     if (numOfSelection == 3){
-        alert("您已成功上傳祈禱文");
+        alert("您已成功上傳祈禱文" + keywords);
         window.location.href = 'finalPost.html';
         let key = keywords[0]*100 + keywords[1]*10 + keywords[2];
         let postContent = god1.get(key);

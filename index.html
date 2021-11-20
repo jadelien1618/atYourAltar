@@ -6,8 +6,29 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/style.css">
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script>
+			axios.get('http://localhost:3000/')
+			.then(function (response) {
+				// handle succes
+				d = response.data;
+				document.getElementById('counter0').innerHTML += (d.counter[0] + " 位信徒");
+				document.getElementById('counter1').innerHTML += (d.counter[1] + " 位信徒");
+				document.getElementById('counter2').innerHTML += (d.counter[2] + " 位信徒");
+				console.log(response);
+			})
+			.catch(function (error) {
+				// handle error
+				console.log(error);
+			})
+			.then(function () {
+				// always executed
+			});
+		</script>
+
 		<title>數位聖嬰</title>
 		<style type="text/css"></style>
+		
 	</head>
 
 	<body>
@@ -37,9 +58,7 @@
 					</div>
 					<div class="subtitle">
 						@St.DigitalBae<br><br>
-						<script>
-							document.write(localStorage.getItem('numOfSubmission') + " 位信徒");
-						</script>
+						<div id="counter0"></div>
 						<br><br>
 					</div>
 					<div class="text">
@@ -60,7 +79,8 @@
 					</div>
 					<div class="subtitle">
 						@NotWithoutCheese<br><br>
-						948 位信徒<br><br>
+						<div id="counter1"></div>
+						<br><br>
 					</div>
 					<div class="text">
 						「並非沒有起司」的信徒信奉所謂「主體存在當中真實的空洞」——如同起司的本質與其美味的關鍵並不在於起司的實體存在，而是在於起司當中的洞。<br><br>
@@ -80,7 +100,8 @@
 					</div>
 					<div class="subtitle">
 						@theIncognito<br><br>
-						123 位信徒<br><br>
+						<div id="counter2"></div>
+						<br><br>
 					</div>
 					<div class="text">
 						無痕主義 (incognito-ism) 讚頌與關懷社會當中「不可被見」的邊緣人與隱形人，其信徒相信世間萬物皆是「可擦拭的」(erasable) 且「終將被擦拭」。<br><br>
