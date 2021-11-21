@@ -177,7 +177,7 @@ function calculatePost() {
     }
 
     if (numOfSelection == 3){
-        alert("您已成功上傳祈禱文" + numbers);
+        alert("您已成功上傳祈禱文");
         window.location.href = 'finalPost.html';
         let firstArray = keywords[0];
         let secondArray = keywords[1];
