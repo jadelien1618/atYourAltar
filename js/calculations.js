@@ -17,7 +17,7 @@ var numOfSelection = 0;
 var numOfSubmission = 0;
 var keywords = [];
 var numbers = [];
-var tags = ["#奉聖嬰之名","數位末世","網民無助","天國仙納度","2038年網路失控","#救世病毒","#靈擾現象","#魔鬼酸民","#十二工程師使徒"];
+var tags = ["#奉聖嬰之名","#數位末世","#網民無助","#天國仙納度","#2038年網路失控","#救世病毒","#靈擾現象","#魔鬼酸民","#十二工程師使徒"];
 
 function changeColor1(id,keyword,number,points) {
 
@@ -30,6 +30,7 @@ function changeColor1(id,keyword,number,points) {
         score = score + points;
         numOfSelection = numOfSelection + 1;
         window[id]=false;
+        numbers.push(number);
         keywords.push(keyword);
         input.value='';
         return;
@@ -176,7 +177,7 @@ function calculatePost() {
     }
 
     if (numOfSelection == 3){
-        alert("您已成功上傳祈禱文" + keywords);
+        alert("您已成功上傳祈禱文" + numbers);
         window.location.href = 'finalPost.html';
         let firstArray = keywords[0];
         let secondArray = keywords[1];
@@ -184,7 +185,7 @@ function calculatePost() {
         let firstNumber = numbers[0];
         let secondNumber = numbers[1];
         let thirdNumber = numbers[2];
-        let postContent = "&nbsp&nbsp&nbsp&nbsp&nbsp" + firstArray[Math.floor(Math.random()*firstArray.length)] + "<br>" +  "&nbsp&nbsp&nbsp&nbsp&nbsp" + secondArray[Math.floor(Math.random()*secondArray.length)] + "<br>" +  "&nbsp&nbsp&nbsp&nbsp&nbsp" +thirdArray[Math.floor(Math.random()*thirdArray.length)] + "<br><br>" + tags[firstNumber] + tags[secondNumber] + tags[thirdNumber];
+        let postContent = "&nbsp&nbsp&nbsp&nbsp&nbsp" + firstArray[Math.floor(Math.random()*firstArray.length)] + "<br>" +  "&nbsp&nbsp&nbsp&nbsp&nbsp" + secondArray[Math.floor(Math.random()*secondArray.length)] + "<br>" +  "&nbsp&nbsp&nbsp&nbsp&nbsp" +thirdArray[Math.floor(Math.random()*thirdArray.length)] + "<br><br>" + tags[firstNumber] + "&nbsp" + tags[secondNumber] + "&nbsp" + tags[thirdNumber];
         numOfSubmission = numOfSubmission + 1;
         localStorage.setItem('numOfSubmission', numOfSubmission);
         localStorage.setItem('postContent', postContent);
