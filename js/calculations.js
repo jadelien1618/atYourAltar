@@ -36,7 +36,7 @@ function changeColor1(id,keyword,number,points) {
         return;
     } 
     if (window[id]==false){
-        document.getElementById(id).style.backgroundColor = "black";
+        document.getElementById(id).style.backgroundColor = "#e0e0e0";
         document.getElementById(id).style.border = "1px solid #01CD98";
         score = score - points;
         numOfSelection = numOfSelection - 1;
@@ -69,7 +69,7 @@ function changeColor2(id,keyword,number,points) {
         return;
     } 
     if (window[id]==false){
-        document.getElementById(id).style.backgroundColor = "black";
+        document.getElementById(id).style.backgroundColor = "#e0e0e0";
         document.getElementById(id).style.border = "1px solid #FE5858";
         score = score - points;
         numOfSelection = numOfSelection - 1;
@@ -96,7 +96,7 @@ function changeColor3(id,points) {
         return;
     } 
     if (window[id]==false){
-        document.getElementById(id).style.backgroundColor = "black";
+        document.getElementById(id).style.backgroundColor = "#e0e0e0";
         document.getElementById(id).style.border = "1px solid #FFB400";
         score = score / points;
         window[id]=true;
@@ -107,29 +107,29 @@ function changeColor3(id,points) {
 function changeColor4(id) {
 
     if (window[id]==true){
-        document.getElementById(id).style.backgroundColor = "#1036FF";
+        document.getElementById(id).style.backgroundColor = "#4160ff";
         window[id]=false;
         inputName.value='@';
         return;
     } 
     if (window[id]==false){
-        document.getElementById(id).style.backgroundColor = "black";
-        document.getElementById(id).style.border = "1px solid #1036FF";
+        document.getElementById(id).style.backgroundColor = "#e0e0e0";
+        document.getElementById(id).style.border = "1px solid #4160ff";
         window[id]=true;
         return;
     }
 } 
 
 function resetAnonymousButton(id){
-    document.getElementById(id).style.backgroundColor = "black";
-    document.getElementById(id).style.border = "1px solid #1036FF";
+    document.getElementById(id).style.backgroundColor = "#e0e0e0";
+    document.getElementById(id).style.border = "1px solid #4160ff";
     window[id]=true;
 }
 
 function resetKeywordButton(){
 
-    var keywordStatesStr = ['a','b','c','d','e','f','g','h','i','j'];
-    for (let i=0;i<10;i++){
+    var keywordStatesStr = ['a','b','c','d','e','f','g','h','i','j','l','m'];
+    for (let i=0;i<12;i++){
         if (document.getElementById(keywordStatesStr[i]).style.backgroundColor=="#FE5858"){
             document.getElementById(keywordStatesStr[i]).style.border = "1px solid #FE5858";
         }
@@ -139,7 +139,7 @@ function resetKeywordButton(){
         if (document.getElementById(keywordStatesStr[i]).style.backgroundColor=="#FFB400"){
             document.getElementById(keywordStatesStr[i]).style.border = "1px solid #FFB400";
         }
-        document.getElementById(keywordStatesStr[i]).style.backgroundColor = "black";
+        document.getElementById(keywordStatesStr[i]).style.backgroundColor = "#e0e0e0";
         window[keywordStatesStr[i]]=true;
         score = 0;
         numOfSelection = 0;
