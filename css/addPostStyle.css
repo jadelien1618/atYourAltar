@@ -16,6 +16,12 @@ body {
 	height: 100%;
 	
 	overflow:hidden !important;
+
+	background:
+	linear-gradient(#CBD2E6, transparent),
+	linear-gradient(to top left, #F4E3D9, transparent),
+	linear-gradient(to top right, #F9BAB8, transparent);
+background-blend-mode: screen;
 }
 
 

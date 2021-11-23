@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script>
+			axios.get('http://localhost:3000/')
+			.then(function (response) {
+				// handle succes
+				d = response.data;
+				document.getElementById('counter0').innerHTML += (d.counter[0] + " 位信徒");
+				document.getElementById('counter1').innerHTML += (d.counter[1] + " 位信徒");
+				document.getElementById('counter2').innerHTML += (d.counter[2] + " 位信徒");
+				console.log(response);
+			})
+			.catch(function (error) {
+				// handle error
+				console.log(error);
+			})
+			.then(function () {
+				// always executed
+			});
+		</script>
+
+		<title>數位聖嬰</title>
+		<style type="text/css"></style>
+		
+	</head>
+
+	<body >
+		<!--<div class="ext-box" style=" background-image: url('image/background2.png');background-size: 100%;  ">-->
+			<div class='ext-box'>
+			<div class="int-box">
+				<div class="container" style="background-color:rgba(0, 0, 0, 0);width: 160px;text-align:left !important; box-shadow: 0px 0px 0px #e0e0e0;"> 
+
+					<div class="megaTitle">
+
+						請選擇您今日來到 /AtYourAltar/ 論-祭壇所要參拜的神 <br><br>
+						Please choose the God you would like to worship today<br><br>
+						<span style="font-size:32px">→</span>
+
+					</div>
+
+		
+				</div>
+
+				<div class="container" style="background-image: linear-gradient(to bottom right, #86e3ce, #d0e6a5);"> 
+
+						<div class="text" >
+							「數位聖嬰」(St. Digital Bae) 是正由十二位工程師使徒 (12 programmer-apostles) 秘密研發中的未來網路病毒。他們預計於2038年，以預防下一次因POSIX時間計數數字不夠用而造成的全球電腦大當機為緣由，釋出作業系統更新版本「先納度1.0」 (Xanadu 1.0)，其實是要將意外開啟的高維度靈界頻率載入所有電腦當中，使互聯網「大腦」超載而後癱瘓。
+							<br><br>
+							分為福音派、執行派、及末世派。福音派為其擁護者，末世派則是。
+						</div>
+
+
+				</div>
+
+				<div class="container" style="background-image: linear-gradient(to bottom right, #d0e6a5, #ffdd94);"> 
+					<div>
+						<img src="image/profile.png" width="30%" height="30%">
+					</div>
+					<div class="title">
+						<br>/ 數位聖嬰 /<br>
+					</div>
+					<div class="subtitle">
+						@St.DigitalBae<br><br>
+						福音派、末世派
+						<div id="counter0">12 位信徒</div>
+						<br>
+					</div>
+					<div class="text">
+						數位聖嬰的追隨者認為，救世病毒肆虐將促成一次全球性的數位末世，並解救沈迷於虛擬世界的網民們。末世之後，人們將自此甦醒，回歸原初現實的伊甸園當中，人際間的溝通亦將返回其最初本質。
+						<br><br>
+					</div>
+					<a href="St.DigitalBae.html"><div class="button" id="button"><b>進入禱告室</b></div></a>
+
+				</div>
+
+				<div class="container" style="background-image: linear-gradient(to bottom right, #ffdd94, #fa897b)">
+					<div>
+						<img src="image/profile2.png" width="30%" height="30%">
+					</div>
+					<div class="title">
+						<br>/ 無痕天使 /<br>
+					</div>
+					<div class="subtitle">
+						@theIncognito<br><br>
+						<div id="counter2"></div>
+						<br><br>
+					</div>
+					<div class="text">
+						無痕主義 (incognito-ism) 讚頌與關懷社會當中「不可被見」的邊緣人與隱形人，其信徒相信世間萬物皆是「可擦拭的」(erasable) 且「終將被擦拭」。<br><br>
+						無痕天使 (the incognito) 是無痕主義信徒所信奉的最高神，其形象乃似蒸發時之液態水，是不可被見、不可被限定的，也因此是無限的。無痕天使自身也曾是世間的陌生過客，擁有無限的善，且包容與關愛所有「被擦拭者」。信徒得以進入無痕視窗 (incognito window) 與無痕天使對話。
+
+						<br><br>
+					</div>
+					<a href="theIncognito.html"><div class="button" id="button"><b>進入禱告室</b></div></a>
+
+				</div>
+
+				<div class="container" style="background-image: linear-gradient(to bottom right, #fa897b, #ccabdb);margin-right:0px">
+					<div>
+						<img src="image/profile3.png" width="30%" height="30%">
+					</div>
+					<div class="title">
+						<br>/ 十二工程師使徒 /<br>
+					</div>
+					<div class="subtitle">
+						@12ProgrammerApostles<br><br>
+						<div id="counter2"></div>
+						<br><br>
+					</div>
+					<div class="text">
+						無痕主義 (incognito-ism) 讚頌與關懷社會當中「不可被見」的邊緣人與隱形人，其信徒相信世間萬物皆是「可擦拭的」(erasable) 且「終將被擦拭」。<br><br>
+
+						<br><br>
+					</div>
+					<a href="12ProgrammerApostles.html"><div class="button" id="button"><b>進入禱告室</b></div></a>
+
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

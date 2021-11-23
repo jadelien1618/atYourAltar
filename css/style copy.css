@@ -7,35 +7,50 @@ html::-webkit-scrollbar {
 	display: none;
   }
 body {
+	background-color:#e0e0e0;
 	margin: 0;
 	padding: 0;
-	text-align: left;
+	text-align: center;
 	width: 100%;
 	height: 100%;
-	background:
-	linear-gradient(#CBD2E6, transparent),
-	linear-gradient(to top left, #F4E3D9, transparent),
-	linear-gradient(to top right, #F9BAB8, transparent);
-	background-blend-mode: screen;
+	
 	overflow-y:hidden !important;
 }
 
+
 div.ext-box {
-	width:75%;
-	margin:auto;
+	padding-left:10px;
+	float:left;
 	height:100%;
+	/*width:1480px;*/
+
 	display:table;
-
-	
-
 }
 
 div.int-box {
 	display:table-cell;
 	vertical-align: middle;
-
+}
+.container {
+	position:relative;
+	width:210px;
+	border-radius: 12px;
+	background: #ececec;
+	padding: 35px; 
+	float: left;
+	margin-right:20px;
+	box-shadow: 0px 0px 20px #e0e0e0;
 }
 
+
+
+#button {
+	margin: auto;
+	border-radius: 12px;
+	background: #01CD98;
+	padding: 13px;
+
+}
 
 .title {
 	font-size: 16px;
@@ -45,7 +60,6 @@ div.int-box {
 	text-decoration: none;
 	color: black;
 	letter-spacing: 00em;
-
 
  }
 
@@ -72,7 +86,7 @@ div.int-box {
 
 .text {
 	font-size: 12px;
-	line-height: 22px;
+	line-height: 16px;
 	font-family: 'Arial', "微軟正黑體", sans-serif;
 	text-transform: none;
 	text-decoration: none;
@@ -82,7 +96,7 @@ div.int-box {
 }
 
 .button {
-	font-size: 10px;
+	font-size: 14px;
 	line-height: 16px;
 	font-family: 'Arial', "微軟正黑體", sans-serif;
 	text-transform: none;
@@ -92,27 +106,7 @@ div.int-box {
 
  }
 
-
-#button {
-	margin: auto;
-	border-radius: 24px;
-	background: #01CD98;
-	padding: 13px;
-	width: 30%;
-
-
-}
-
  :any-link {
 
 	text-decoration: none;
  }
-
-.circle {
-	width: 25px;
-	height: 25px;
-	-webkit-border-radius: 25px;
-	-moz-border-radius: 25px;
-	border-radius: 25px;
-	background: red;
-  }
