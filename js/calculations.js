@@ -11,13 +11,12 @@ var i = true;
 var j = true;
 var k = true;
 var l = true;
-var m = true;
 
 var numOfSelection = 0;
 var numOfSubmission = 0;
 var keywords = [];
 var numbers = [];
-var tags = ["#奉聖嬰之名","#數位末世","#網民無助","#天國仙納度","#2038年網路失控","#救世病毒","#靈擾現象","#魔鬼酸民","#十二工程師使徒"];
+var tags = ["#奉聖嬰之名","#數位末世","#網民無助","#天國仙納度","#2038年網路失控","#救世病毒","#靈擾現象","#魔鬼酸民"];
 
 function changeColor1(id,keyword,number,points) {
 
@@ -128,8 +127,8 @@ function resetAnonymousButton(id){
 
 function resetKeywordButton(){
 
-    var keywordStatesStr = ['a','b','c','d','e','f','g','h','i','j','l','m'];
-    for (let i=0;i<12;i++){
+    var keywordStatesStr = ['a','b','c','d','e','f','g','h','i','j','l'];
+    for (let i=0;i<11;i++){
         if (document.getElementById(keywordStatesStr[i]).style.backgroundColor=="#FE5858"){
             document.getElementById(keywordStatesStr[i]).style.border = "1px solid #FE5858";
         }
