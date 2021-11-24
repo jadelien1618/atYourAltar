@@ -38,7 +38,7 @@ div.int-box {
 	padding: 35px; 
 	float: left;
 	margin-right:20px;
-	background-image: linear-gradient(to bottom, #2b2b2b, #161616);
+	background-image: linear-gradient(to bottom, #242424, #161616);
 
 }
 
@@ -69,18 +69,18 @@ div.int-box {
 	font-family: 'Arial', "微軟正黑體", sans-serif;
 	text-transform: none;
 	text-decoration: none;
-	color: #7c7c7c;
+	color: #969696;
 	letter-spacing: 00em;
 
  }
 
 .text {
 	font-size: 12px;
-	line-height: 16px;
+	line-height: 18px;
 	font-family: 'Arial', "微軟正黑體", sans-serif;
 	text-transform: none;
 	text-decoration: none;
-	color: #969696;
+	color: #a5a5a5;
 	letter-spacing: 00em;
 	text-align: left;
 }
@@ -121,7 +121,7 @@ div.int-box {
 	display:inline-block;
 	position:relative;
 	background: #2b2b2b;
-	color: #e0e0e0;
+	color: #969696;
 	padding: 8px;
 	margin-left: 3px;
 	margin-right: 3px;
