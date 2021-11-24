@@ -41,7 +41,7 @@ div.container {
 
 	position:relative;
 	border-radius: 12px;
-	background-color: #ececec99;
+	background-color: #ffffff90;
 	backdrop-filter: blur(2px);
 
 }
@@ -65,7 +65,7 @@ div.container {
 	font-family: 'Arial', "微軟正黑體", sans-serif;
 	text-transform: none;
 	text-decoration: none;
-	color: black;
+	color: #6b6b6b;
 	letter-spacing: 00em;
 
  }
@@ -76,7 +76,7 @@ div.container {
 	font-family: 'Arial', "微軟正黑體", sans-serif;
 	text-transform: none;
 	text-decoration: none;
-	color: black;
+	color: #333333;
 	letter-spacing: 00em;
 	text-align:left;
 }

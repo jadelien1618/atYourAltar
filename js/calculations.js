@@ -184,7 +184,7 @@ function calculatePost() {
         let firstNumber = numbers[0];
         let secondNumber = numbers[1];
         let thirdNumber = numbers[2];
-        let postContent = "&nbsp&nbsp&nbsp&nbsp&nbsp" + start[Math.floor(Math.random()*start.length)] + firstArray[Math.floor(Math.random()*firstArray.length)] + "<br>" +  "&nbsp&nbsp&nbsp&nbsp&nbsp" + secondArray[Math.floor(Math.random()*secondArray.length)] + "<br>" +  "&nbsp&nbsp&nbsp&nbsp&nbsp" +thirdArray[Math.floor(Math.random()*thirdArray.length)] + "<br><br>" + tags[firstNumber] + "&nbsp" + tags[secondNumber] + "&nbsp" + tags[thirdNumber];
+        let postContent = "&nbsp&nbsp&nbsp&nbsp&nbsp" + start[Math.floor(Math.random()*start.length)] + firstArray[Math.floor(Math.random()*firstArray.length)] + "<br>" +  "&nbsp&nbsp&nbsp&nbsp&nbsp" + secondArray[Math.floor(Math.random()*secondArray.length)] + "<br>" +  "&nbsp&nbsp&nbsp&nbsp&nbsp" +thirdArray[Math.floor(Math.random()*thirdArray.length)] + end[Math.floor(Math.random()*end.length)] + "<br><br>" + tags[firstNumber] + "&nbsp" + tags[secondNumber] + "&nbsp" + tags[thirdNumber];
         numOfSubmission = numOfSubmission + 1;
         localStorage.setItem('numOfSubmission', numOfSubmission);
         localStorage.setItem('postContent', postContent);
