@@ -6,11 +6,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/addPostStyle.css">
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-		<script src="js/map.js"></script>
+		<script src="js/InternetIsGodKeywordMap.js"></script>
 		<script src="js/calculations.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script>
+			var tags = ["#奉通靈網之名","#數位末世","#網民無助","#天國仙納度","#2038年網路失控","#救世病毒","#靈擾現象","#魔鬼酸民"];
+		</script>
 
-		<title>數位聖嬰</title>
+		<title>通靈網</title>
 		<style type="text/css"></style>
 
 	</head>
@@ -23,16 +26,14 @@
 				<div class="direction">
 					請選擇三個關鍵字<br><br>
 				</div>
-				<a href="#" onclick="changeColor1('a',奉聖嬰之名,0,1)"><div class="tag1" id="a" style="margin-right:10px;">奉聖嬰之名 <b>+1</b></div></a>
-				<a href="#" onclick="changeColor2('b',數位末世,1,-1)"><div class="tag2" id="b">數位末世 <b>-1</b></div></a><br>
-				<a href="#" onclick="changeColor2('c',網民無助,2,-1)"><div class="tag2" id="c" style="margin-right:10px;">網民無助 <b>-1</b></div></a>
-				<a href="#" onclick="changeColor1('d',天國仙納度,3,1)"><div class="tag1" id="d">天國仙納度 <b>+1</b></div></a><br>
+				<a href="#" onclick="changeColor1('a',奉通靈網之名,0,1)"><div class="tag1" id="a" style="margin-right:10px;">奉通靈網之名 <b>+1</b></div></a>
+				<a href="#" onclick="changeColor2('b',數位末世陰謀論,1,-1)"><div class="tag2" id="b">數位末世陰謀論 <b>-1</b></div></a><br>
+				<a href="#" onclick="changeColor2('c',全體意識上傳,2,-1)"><div class="tag2" id="c" style="margin-right:10px;">全體意識上傳 <b>-1</b></div></a>
+				<a href="#" onclick="changeColor1('d',雲端天國仙納度,3,1)"><div class="tag1" id="d">雲端天國仙納度 <b>+1</b></div></a><br>
 				<a href="#" onclick="changeColor2('e',年網路失控,4,-1)"><div class="tag2" id="e" style="margin-right:10px;">2038年網路失控 <b>-1</b></div></a>
-				<a href="#" onclick="changeColor1('f',救世病毒,5,1)"><div class="tag1" id="f">救世病毒 <b>+1</b></div></a><br>
+				<a href="#" onclick="changeColor1('f',毀世病毒,5,1)"><div class="tag1" id="f">毀世病毒 <b>+1</b></div></a><br>
 				<a href="#" onclick="changeColor1('g',靈擾現象,6,1)"><div class="tag1" id="g" style="margin-right:10px;">靈擾現象 <b>+1</b></div></a>
-				<a href="#" onclick="changeColor2('l',魔鬼酸民,7,-1)"><div class="tag2" id="l">魔鬼酸民 <b>-1</b></div></a><br>
-				<a href="#" onclick="changeColor1('m',十二工程師使徒,8,1)"><div class="tag1" id="m">十二工程師使徒 <b>+1</b></div></a>
-				<br><br>
+				<a href="#" onclick="changeColor2('l',魔鬼聖嬰,7,-1)"><div class="tag2" id="l">魔鬼聖嬰 <b>-1</b></div></a><br>				<br><br>
 				<div class="direction">
 					或輸入您自己的祈禱文<br><br>
 					<input type="text" class="input" id="input" oninput="resetKeywordButton()">

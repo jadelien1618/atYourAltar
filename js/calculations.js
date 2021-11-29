@@ -16,7 +16,6 @@ var numOfSelection = 0;
 var numOfSubmission = 0;
 var keywords = [];
 var numbers = [];
-var tags = ["#奉聖嬰之名","#數位末世","#網民無助","#天國仙納度","#2038年網路失控","#救世病毒","#靈擾現象","#魔鬼酸民"];
 
 function changeColor1(id,keyword,number,points) {
 
