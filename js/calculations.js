@@ -159,7 +159,6 @@ function calculatePost() {
     
     if (document.getElementById("input").value.length != 0) {
         alert("您已成功上傳祈禱文");
-        window.location.href = 'prayer.html';
         let postContent = document.getElementById("input").value;
         if (document.getElementById("inputName").value.length != 0){
             var name = document.getElementById("inputName").value;
@@ -169,11 +168,6 @@ function calculatePost() {
         }
 
         let noNumber = Math.floor((Math.random() * 9000000) + 1000000);
-
-        localStorage.setItem('postContent', postContent);
-        localStorage.setItem('score', score);
-        localStorage.setItem('nameContent', name);
-        localStorage.setItem('noNumber', noNumber);
        
         axios.post(url + "/send", {
             score: score,
@@ -182,14 +176,20 @@ function calculatePost() {
             name: name,
             no: noNumber,
         }).then(response => {
-            console.log(response.data)
+            console.log(response.data);
+            window.location.href = 'prayer.html';
         })
 
+        localStorage.setItem('postContent', postContent);
+        localStorage.setItem('score', score);
+        localStorage.setItem('nameContent', name);
+        localStorage.setItem('noNumber', noNumber);
+
+        
     }
 
     if (numOfSelection == 3){
         alert("您已成功上傳祈禱文");
-        window.location.href = 'prayer.html';
 
         let firstArray = keywords[0];
         let secondArray = keywords[1];
@@ -208,12 +208,6 @@ function calculatePost() {
 
         let noNumber = Math.floor((Math.random() * 9000000) + 1000000);
 
-        localStorage.setItem('postContent', postContent);
-        localStorage.setItem('score', score);
-        localStorage.setItem('nameContent', name);
-        localStorage.setItem('noNumber', noNumber);
-    
-        alert('success');
         axios.post(url + "/send", {
             score: score,
             altarindex: altarindex,
@@ -221,9 +215,17 @@ function calculatePost() {
             name: name,
             no: noNumber
         }).then(response => {
-            console.log(response.data)
+            console.log(response.data);
+            window.location.href = 'prayer.html';
         })
+
+        localStorage.setItem('postContent', postContent);
+        localStorage.setItem('score', score);
+        localStorage.setItem('nameContent', name);
+        localStorage.setItem('noNumber', noNumber);
+
+
     }
-   
+
 }
 
