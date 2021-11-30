@@ -13,9 +13,9 @@ var k = true;
 var l = true;
 
 var numOfSelection = 0;
-var numOfSubmission = 0;
 var keywords = [];
 var numbers = [];
+var url = "https://jade.ntuphoto.tw";
 
 function changeColor1(id,keyword,number,points) {
 
@@ -160,23 +160,37 @@ function calculatePost() {
     if (document.getElementById("input").value.length != 0) {
         alert("您已成功上傳祈禱文");
         window.location.href = 'prayer.html';
-        numOfSubmission = numOfSubmission + 1;
         let postContent = document.getElementById("input").value;
         if (document.getElementById("inputName").value.length != 0){
-            localStorage.setItem('nameContent', document.getElementById("inputName").value);
+            var name = document.getElementById("inputName").value;
         } 
         if (k==false){
-            localStorage.setItem('nameContent', 'Anonymous');
+            var name = 'Anonymous';
         }
-        localStorage.setItem('numOfSubmission', numOfSubmission);
+
+        let noNumber = Math.floor((Math.random() * 9000000) + 1000000);
+
         localStorage.setItem('postContent', postContent);
         localStorage.setItem('score', score);
-        return;
+        localStorage.setItem('nameContent', name);
+        localStorage.setItem('noNumber', noNumber);
+       
+        axios.post(url + "/send", {
+            score: score,
+            altarindex: altarindex,
+            message: postContent,
+            name: name,
+            no: noNumber,
+        }).then(response => {
+            console.log(response.data)
+        })
+
     }
 
     if (numOfSelection == 3){
         alert("您已成功上傳祈禱文");
         window.location.href = 'prayer.html';
+
         let firstArray = keywords[0];
         let secondArray = keywords[1];
         let thirdArray = keywords[2];
@@ -184,19 +198,32 @@ function calculatePost() {
         let secondNumber = numbers[1];
         let thirdNumber = numbers[2];
         let postContent = start[Math.floor(Math.random()*start.length)] + firstArray[Math.floor(Math.random()*firstArray.length)]+secondArray[Math.floor(Math.random()*secondArray.length)]+thirdArray[Math.floor(Math.random()*thirdArray.length)] + end[Math.floor(Math.random()*end.length)] + "<br><br>" + tags[firstNumber] + "&nbsp" + tags[secondNumber] + "&nbsp" + tags[thirdNumber];
-        numOfSubmission = numOfSubmission + 1;
-        localStorage.setItem('numOfSubmission', numOfSubmission);
-        localStorage.setItem('postContent', postContent);
-        localStorage.setItem('score', score);
+    
         if (document.getElementById("inputName").value.length != 0){
-            localStorage.setItem('nameContent', document.getElementById("inputName").value);
+            var name = document.getElementById("inputName").value;
         } 
         if (k==false){
-            localStorage.setItem('nameContent', 'Anonymous');
+            var name = 'Anonymous';
         }
-        
 
+        let noNumber = Math.floor((Math.random() * 9000000) + 1000000);
+
+        localStorage.setItem('postContent', postContent);
+        localStorage.setItem('score', score);
+        localStorage.setItem('nameContent', name);
+        localStorage.setItem('noNumber', noNumber);
+    
+        alert('success');
+        axios.post(url + "/send", {
+            score: score,
+            altarindex: altarindex,
+            message: postContent,
+            name: name,
+            no: noNumber
+        }).then(response => {
+            console.log(response.data)
+        })
     }
+   
 }
-
 

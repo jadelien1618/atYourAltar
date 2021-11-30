@@ -61,7 +61,8 @@
 						</script>
 						<br>
 						<script>
-							document.write("No." + Math.floor((Math.random() * 9000000) + 1000000));
+							document.write("No." + localStorage.getItem('noNumber'));
+							localStorage.removeItem('noNumber');
 						</script>
 						<br><br>
 					</div>

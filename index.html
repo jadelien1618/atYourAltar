@@ -8,24 +8,18 @@
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 		<script>
-			axios.get('http://localhost:3000/')
-			.then(function (response) {
-				// handle succes
-				d = response.data;
-				document.getElementById('counter0').innerHTML += (d.counter[0] + " 位信徒");
-				document.getElementById('counter1').innerHTML += (d.counter[1] + " 位信徒");
-				document.getElementById('counter2').innerHTML += (d.counter[2] + " 位信徒");
-				console.log(response);
-			})
-			.catch(function (error) {
-				// handle error
-				console.log(error);
-			})
-			.then(function () {
-				// always executed
-			});
-		</script>
+			var url = "https://jade.ntuphoto.tw";
 
+			// 取得三個壇的數量
+			// counter
+			axios.get(url + "/counter").then(response => {
+				d = response.data;
+				document.getElementById('counter0').innerHTML += (d.result[0] + " 位信徒");
+				document.getElementById('counter1').innerHTML += (d.result[1] + " 位信徒");
+				document.getElementById('counter2').innerHTML += (d.result[2] + " 位信徒");
+				console.log(response.data)
+			})
+		</script>
 		<title>數位聖嬰</title>
 		<style type="text/css"></style>
 		
@@ -61,7 +55,7 @@
 					</div>
 					<div class="subtitle">
 						@St.DigitalBae<br><br>
-						<div id="counter0">12 位信徒在線上</div><br>
+						<div id="counter0"></div><br>
 						<div class="tag">福音派</div>
 						<br><br><br>
 					</div>
@@ -81,7 +75,7 @@
 					</div>
 					<div class="subtitle">
 						@InternetIsGod<br><br>
-						<div id="counter2">24 位信徒在線上</div>
+						<div id="counter2"></div>
 						<br>
 						<div class="tag" style="width:37%;">永劫連線派</div><br><br><br>
 					</div>
@@ -103,7 +97,7 @@
 					</div>
 					<div class="subtitle">
 						@12ProgrammerApostles<br><br>
-						<div id="counter2">60 位信徒在線上</div>
+						<div id="counter3"></div>
 						<br>
 
 						<div class="tag">改革派</div><br><br><br>
