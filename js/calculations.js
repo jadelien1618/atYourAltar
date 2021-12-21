@@ -158,7 +158,6 @@ function calculatePost() {
     }
     
     if (document.getElementById("input").value.length != 0) {
-        alert("您已成功上傳祈禱文");
         let postContent = document.getElementById("input").value;
         if (document.getElementById("inputName").value.length != 0){
             var name = document.getElementById("inputName").value;
@@ -189,8 +188,6 @@ function calculatePost() {
     }
 
     if (numOfSelection == 3){
-        alert("您已成功上傳祈禱文");
-
         let firstArray = keywords[0];
         let secondArray = keywords[1];
         let thirdArray = keywords[2];
