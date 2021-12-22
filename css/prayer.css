@@ -49,7 +49,7 @@ div.container {
 
 
 .title {
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 16px;
 	font-family: 'Arial', "微軟正黑體", sans-serif;
 	text-transform: none;
@@ -60,7 +60,7 @@ div.container {
  }
 
 .subtitle {
-	font-size: 11px;
+	font-size: 12px;
 	line-height: 16px;
 	font-family: 'Arial', "微軟正黑體", sans-serif;
 	text-transform: none;
@@ -71,7 +71,7 @@ div.container {
  }
 
 .text {
-	font-size: 11px;
+	font-size: 12px;
 	line-height: 16px;
 	font-family: 'Arial', "微軟正黑體", sans-serif;
 	text-transform: none;
