@@ -130,7 +130,7 @@ div.int-box {
 	padding: 12px;
 	padding-top: 7px;
 	padding-bottom: 7px;
-	background-color: #e0e0e0;
+	background-color: #e0e0e000;
 	box-shadow: inset 0px 0px 0px 0px red;
 
 	appearance: none;
@@ -154,7 +154,7 @@ div.int-box {
 	padding: 12px;
 	padding-top: 7px;
 	padding-bottom: 7px;
-	background-color: #e0e0e0;
+	background-color: #e0e0e000;
 	box-shadow: inset 0px 0px 0px 0px red;
 
 	appearance: none;
