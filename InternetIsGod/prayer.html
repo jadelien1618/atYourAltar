@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="prayer.css">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<title>通靈網</title>
+		<style type="text/css">
+			body {
+				background-image: linear-gradient(to bottom right, #F1C5DC, #55BCEB);
+			}
+		</style>
+
+	</head>
+
+<body>
+		<div class="ext-box" >
+			
+			<div class="int-box" > 
+
+				<div class="container" >
+					<div>
+						<img src="profile.png" width="30%" height="30%">
+					</div>
+					<div class="title">
+						<br>通靈網<br>
+					</div>
+					<div class="subtitle">
+						@InternetIsGod<br><br>
+
+						<script>
+							if (localStorage.getItem('nameContent').charAt(0) == '@'){
+								document.write("ID: " + localStorage.getItem('nameContent').substring(1));
+								localStorage.removeItem('nameContent');
+							} else {
+								document.write("ID: " + localStorage.getItem('nameContent'));
+								localStorage.removeItem('nameContent');
+							}
+
+						</script>
+						<br>
+						<script>
+							var days = ['Sun','Mon','Tue','Wed','Thur','Fri','Sat'];
+							var currentTime = new Date();
+							var month = currentTime.getMonth() + 1;
+							var day = currentTime.getDate();
+							var year = currentTime.getFullYear();
+							var weekday = currentTime.getDay();
+							var hours = currentTime.getHours();
+							var minutes = currentTime.getMinutes();
+							var seconds = currentTime.getSeconds();
+							year = year - 2000;
+							if (hours < 10){
+								hours = "0" + hours;
+							}
+							if (minutes < 10){
+								minutes = "0" + minutes;
+							}
+							if (seconds < 10){
+								seconds = "0" + seconds;
+							}
+							document.write(month + "/" + day + "/" + year + "(" + days[weekday] + ")" + hours + ":" + minutes + ":" + seconds);
+						</script>
+						<br>
+						<script>
+							document.write("No." + localStorage.getItem('noNumber'));
+							localStorage.removeItem('noNumber');
+						</script>
+						<br><br>
+					</div>
+					<div class="text">
+						<script>
+							document.write(localStorage.getItem('postContent'));
+							localStorage.removeItem('postContent');
+						</script>
+						<!--<script>
+							document.write("score:" + localStorage.getItem('score'));
+							localStorage.removeItem('score');
+						</script>-->
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>

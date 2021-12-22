@@ -176,7 +176,7 @@ function calculatePost() {
             no: noNumber,
         }).then(response => {
             console.log(response.data);
-            window.location.href = 'prayer.html';
+            window.location.href = prayerLink;
         })
 
         localStorage.setItem('postContent', postContent);
@@ -213,7 +213,7 @@ function calculatePost() {
             no: noNumber
         }).then(response => {
             console.log(response.data);
-            window.location.href = 'prayer.html';
+            window.location.href = prayerLink;
         })
 
         localStorage.setItem('postContent', postContent);

@@ -1,52 +1,56 @@
 ﻿html {
 	width: 100%;
 	height: 100%;
-	overflow-y:hidden !important;
+	
 }
 html::-webkit-scrollbar {
 	display: none;
   }
 body {
-	background-color:#ececec;
+	background-color:#e0e0e0;
 	margin: 0;
 	padding: 0;
 	text-align: center;
 	width: 100%;
 	height: 100%;
-	overflow-y:hidden !important;
-
+	
+	
+	/*overflow-y:hidden !important;*/
 }
 
 
 div.ext-box {
-	
-	float:left;
+	width:75%;
+	margin:auto;
 	height:100%;
-	width:1240px;
 	display:table;
 }
 
 div.int-box {
+
 	display:table-cell;
 	vertical-align: middle;
+
+
 }
-.container {
-	position:relative;
+div.container {
+	padding: 12px;
 	width:210px;
 	border-radius: 12px;
-	background: #ffffff90;
 	padding: 35px; 
-	float: left;
-	margin-right:20px;
+
+	position:relative;
+	border-radius: 12px;
+	background-color: #ffffff90;
+	backdrop-filter: blur(2px);
 
 }
-
 
 
 
 .title {
 	font-size: 16px;
-	line-height: 22px;
+	line-height: 16px;
 	font-family: 'Arial', "微軟正黑體", sans-serif;
 	text-transform: none;
 	text-decoration: none;
@@ -68,17 +72,17 @@ div.int-box {
 
 .text {
 	font-size: 12px;
-	line-height: 18px;
+	line-height: 16px;
 	font-family: 'Arial', "微軟正黑體", sans-serif;
 	text-transform: none;
 	text-decoration: none;
 	color: #333333;
 	letter-spacing: 00em;
-	text-align: left;
+	text-align:left;
 }
 
 .button {
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 16px;
 	font-family: 'Arial', "微軟正黑體", sans-serif;
 	text-transform: none;
@@ -88,52 +92,7 @@ div.int-box {
 
  }
 
- #button {
-	margin: auto;
-	border-radius: 50px;
-	padding: 12px;
-
-
-}
-
  :any-link {
 
 	text-decoration: none;
  }
-
-
- .footer {
-	position: fixed;
-	left: 0;
-	bottom:0;
-	width: 100%;
-	padding:45px;
-
-	color: white;
-
-	text-align: left;
- }
-
- .tag {
-	margin: auto;
-	border-radius: 24px;
-	width:25%;
-	display:inline-block;
-	position:relative;
-	background: #ececec;
-	color: #6b6b6b;
-	padding: 8px;
-	margin-left: 3px;
-	margin-right: 3px;
-
-
-}
-
-.circle { 
-	width: 55px;
-	height: 55px; 
-	border-radius: 50px; 
-	display:inline-block;
-	position:relative;
-
-}
