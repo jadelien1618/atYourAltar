@@ -175,9 +175,15 @@ function calculatePost() {
             name: name,
             no: noNumber,
         }).then(response => {
-            console.log(response.data);
-            window.location.href = prayerLink;
-        })
+            if (response.data.status=="fail")
+            {
+                alert("現在有人正在傳送祈禱文，請稍後再上傳");
+            }
+            if (response.data.status=="ok")
+            {
+                window.location.href = prayerLink;
+            }
+        })     
 
         localStorage.setItem('postContent', postContent);
         localStorage.setItem('score', score);
@@ -210,11 +216,18 @@ function calculatePost() {
             altarindex: altarindex,
             message: postContent,
             name: name,
-            no: noNumber
+            no: noNumber,
         }).then(response => {
-            console.log(response.data);
-            window.location.href = prayerLink;
+            if (response.data.status=="fail")
+            {
+                alert("現在有人正在傳送祈禱文，請稍後再上傳");
+            }
+            if (response.data.status=="ok")
+            {
+                window.location.href = prayerLink;
+            }
         })
+
 
         localStorage.setItem('postContent', postContent);
         localStorage.setItem('score', score);
